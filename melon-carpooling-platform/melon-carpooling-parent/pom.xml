@@ -8,31 +8,23 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>melon-carpooling-parent</name>
     <description>melon-carpooling-parent</description>
+    <packaging>pom</packaging>
 
     <properties>
         <java.version>17</java.version>
         <spring-boot.version>3.3.5</spring-boot.version>
     </properties>
 
-    //声明依赖，统一依赖版本管理
+    <!--声明依赖，统一依赖版本管理-->
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
